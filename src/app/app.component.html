@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row g-3 mt-5">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      
+      <div class="row">
+        <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <h3 >Admin Login</h3>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="LoginUser()" >
+        <div  class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <label for="" class="form-label">Email</label>
+            <input type="text" name="userName"  class="form-control" formControlName="user">
+            <span style="color: red;" *ngIf="user&&user.invalid&&user.touched"> Enter a valid email Adress </span>
+        </div>
+        <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <label for="" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" formControlName="password">
+            <span style="color: red;" *ngIf="user&&user.invalid&&user.touched"> password is required</span>
+        </div>
+        <div class="mt-2 col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <button [disabled]="loginForm.invalid"  class="btn btn-success">Login</button>
+        </div>
+      </form>
+       
+    </div>
+    </div>
+  </div>
+</div>
